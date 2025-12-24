@@ -12,3 +12,5 @@ module "networking" {
   availability_zone = var.availability_zone
   env_prefix        = var.env_prefix
 }
+
+
