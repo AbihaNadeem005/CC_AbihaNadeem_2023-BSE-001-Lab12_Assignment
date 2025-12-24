@@ -17,6 +17,5 @@ module "networking" {
 module "security" {
   source = "./modules/security"
   vpc_id     = module.networking.vpc_id     # Use VPC ID from networking module
-  env_prefix = var.env_prefix
-  my_ip      = "154.57.195.96/32"            
+  env_prefix = var.env_prefix           
 }

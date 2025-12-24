@@ -36,3 +36,6 @@ All resources are tagged using env_prefix.
 
 ### 1.4 Security Module
 The security module creates two security groups: Nginx(allowing SSH from the IP, HTTP/HTTPS from anywhere) and Backend(SSH from the IP, HTTP from Nginx SG). Variables vpc_id, env_prefix, and my_ip are define and outputs nginx_sg_id and backend_sg_id provide the security group IDs. All resources are tagged with env_prefix.
+
+### 1.5 Locals Configuration
+The locals configuration defines reusable values used across the project. It dynamically detects the public IP address for secure SSH access, defines common tags applied to AWS resources, and maintains a list of backend server configurations including naming conventions and startup scripts. This approach improves consistency, reusability, and reduces hard-coded values in the Terraform configuration.

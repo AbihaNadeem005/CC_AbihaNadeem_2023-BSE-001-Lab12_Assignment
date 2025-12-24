@@ -9,7 +9,8 @@ resource "aws_security_group" "nginx" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["154.57.195.96/32"]
+    cidr_blocks = [local.my_ip]  # dynamic IP
+
   }
 
   ingress {
@@ -52,7 +53,8 @@ resource "aws_security_group" "backend" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["154.57.195.96/32"]
+    cidr_blocks = [local.my_ip]  # dynamic IP
+
   }
 
   ingress {
