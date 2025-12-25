@@ -1,9 +1,15 @@
-output "nginx_sg_id" {
-  description = "Security group ID for Nginx reverse proxy/load balancer"
-  value       = aws_security_group.nginx.id
+output "instance_id" {
+  description = "ID of the EC2 instance"
+  value       = aws_instance.webserver.id
 }
 
-output "backend_sg_id" {
-  description = "Security group ID for backend web servers"
-  value       = aws_security_group.backend.id
+output "public_ip" {
+  description = "Public IP address of the EC2 instance"
+  value       = aws_instance.webserver.public_ip
 }
+
+output "private_ip" {
+  description = "Private IP address of the EC2 instance"
+  value       = aws_instance.webserver.private_ip
+}
+

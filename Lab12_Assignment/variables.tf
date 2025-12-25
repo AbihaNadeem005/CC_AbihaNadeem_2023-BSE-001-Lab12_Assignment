@@ -28,9 +28,9 @@ variable"instance_type"{
   description="EC2 instance type"
   default="t3.micro"
 }
-variable"public_key"{
-  type=string
-  description="Path to the SSH public key"
+variable "public_key" {
+  type        = string
+  description = "Content of the SSH public key for EC2 Key Pair"
 }
 variable"private_key"{
   type=string
